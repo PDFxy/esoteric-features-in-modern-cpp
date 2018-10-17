@@ -7,8 +7,14 @@
 | 特性 | 提案 | 示例和说明 |
 | :------: | ------: | ------: |
 | `_has_include_`预处理条件 | [P0061R](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0061r1.html) | to write |
-| `[[maybe_unused]]` 属性| [P0212R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0212r1.pdf)| to write |
+| `[[maybe_unused]]`属性| [P0212R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0212r1.pdf)| to write |
 | 内联变量 | [P0386R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r2.pdf) | to write |
+| 保证式拷贝消除 | [P0135R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0135r1.html) | to write |
+| [折叠表达式](https://en.cppreference.com/w/cpp/language/fold) | [N4295](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4295.html) | to write |
+| 构造函数继承 | [P0136R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0136r1.html) | to write |
+| `nan()`,`nearbyint()`,`nextafter()`等数学函数| [P0226R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0226r1.pdf) | to write |
+| if/switch中的初始化语句 | [P0305R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r1.html) | to write |
+
 
 ## C++ 14
 | 特性 | 提案 | 示例和说明 |
