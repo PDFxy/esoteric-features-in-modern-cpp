@@ -37,3 +37,42 @@ enum {
 };
 ```
 但不同的编译器都有不同程度的支持：`g++8.2`会warning非静态成员`v1`不适用`[[maybe_unused]]`，`clang7.0`和`msvc2017`则不会报任何warning。
+
+# 1.3 `[[nodiscard]]`属性
+nodiscard顾名思义，不建议抛弃。如果一个函数返回一个标注了`[[nodiscard]]`的enum/类，或者函数本身就是`[[nodiscard]]`,那么编译器就会对返回值有没有用到的调用发出warning：
+```cpp
+struct [[nodiscard]] A { };
+enum class[[nodiscard]]  B{};
+
+A returnA(){return A();}
+B returnB(){return B{};}
+[[nodiscard]] int returnInt(){return 1;}
+
+void miss() {
+    returnA();
+    returnB();
+    returnInt();
+}
+
+```
+亲爱的clang warning道:
+```shell
+prog.cc:9:5: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+    returnA();
+    ^~~~~~~
+...
+```
+g++不但warning还note：
+```shell
+prog.cc: In function 'void miss()':
+prog.cc:9:13: warning: ignoring returned value of type 'A', declared with attribute nodiscard [-Wunused-result]
+     returnA();
+             ^
+prog.cc:4:3: note: in call to 'A returnA()', declared here
+ A returnA(){return A();}
+   ^~~~~~~
+prog.cc:1:22: note: 'A' declared here
+ struct [[nodiscard]] A { };
+                      ^
+...
+```

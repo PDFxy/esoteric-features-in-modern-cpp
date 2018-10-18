@@ -8,8 +8,8 @@
 | :------: | ------: | ------: |
 | `_has_include`预处理条件 | [P0061R](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0061r1.html) | [std17.md](std17.md) |
 | `[[maybe_unused]]`属性 | [P0212R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0212r1.pdf) | [std17.md](std17.md) |
-| `[[nodiscard]]`属性 | [P0189R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0189r1.pdf) | to write |
-| 内联变量 | [P0386R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r2.pdf) | to write |
+| `[[nodiscard]]`属性 | [P0189R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0189r1.pdf) | [std17.md](std17.md) |
+| 内联变量(inline variable) | [P0386R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r2.pdf) | to write |
 | 保证式拷贝消除 | [P0135R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0135r1.html) | to write |
 | 折叠表达式 | [N4295](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4295.html) | to write |
 | 构造函数继承 | [P0136R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0136r1.html) | to write |
@@ -34,6 +34,7 @@
 | 外部模板实例化 | [N1987](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n1987.htm) | to write |
 | 泛型(多态)lambda表达式 | [N3649](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3649.html) | to write |
 | 单引号分隔数字字面值 | [N3781](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3781.pdf) | to write |
+| 内联命名空间(inline namespace) | [N2535](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2535.htm) | to write |
 
 # 参考
 > https://en.cppreference.com/w/cpp/compiler_support
