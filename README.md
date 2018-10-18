@@ -6,8 +6,8 @@
 ## C++ 17
 | 特性 | 提案 | 示例和说明 |
 | :------: | ------: | ------: |
-| `_has_include_`预处理条件 | [P0061R](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0061r1.html) | to write |
-| `[[maybe_unused]]`属性 | [P0212R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0212r1.pdf) | to write |
+| `_has_include`预处理条件 | [P0061R](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0061r1.html) | [std17.md](std17.md) |
+| `[[maybe_unused]]`属性 | [P0212R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0212r1.pdf) | [std17.md](std17.md) |
 | `[[nodiscard]]`属性 | [P0189R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0189r1.pdf) | to write |
 | 内联变量 | [P0386R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r2.pdf) | to write |
 | 保证式拷贝消除 | [P0135R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0135r1.html) | to write |
