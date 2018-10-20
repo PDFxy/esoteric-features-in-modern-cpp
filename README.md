@@ -19,6 +19,8 @@
 | [`std::string_view`](https://en.cppreference.com/w/cpp/string/basic_string_view) | [N3921](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3921.html) | to write |
 | 结构化绑定 | [P0217R3](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r3.html) | to write |
 | `constexpr` if语句 | [P0292R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0292r2.html) | to write |
+| `std::any` | N/A | to write|
+| `std::apply` | N/A | to write |
 
 ## C++ 14
 | 特性 | 提案 | 示例和说明 |
@@ -26,6 +28,7 @@
 | `std::quoted` | [N3654](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3654.html) | to write |
 | `0b/0B`二进制字面值 | [N3472](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3472.pdf) | to write |
 | 变量模板(variable template) |  [N3651](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3651.pdf) | to write |
+| `std::integer_sequence` | [N3658](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3658.html) | to write |
 
 ## C++ 11
 | 特性 | 提案 | 示例和说明 |
