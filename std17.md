@@ -77,4 +77,50 @@ prog.cc:1:22: note: 'A' declared here
 ...
 ```
 # 1.4 内联变量(inline variable)
-函数可以内联，命名空间可以内联，好了，现在变量也可以内联了。变量内联即意味着它独一无二的定义在多个翻译单元中，但是程序行为还是好像就定义了一个变量一样。
+函数可以内联，命名空间可以内联，好了，现在变量也可以内联了。内联变量类似于内联函数，他告诉链接器即使有多个编译单元使用这个变量，也保证只有一份定义，而不是抛出重定义异常。
+举个例子，我们有三个文件：
+
+`A.h`:
+```cpp
+#ifndef _A
+#define _A
+
+int k = 7;
+
+#endif
+```
+`B.cpp`:
+```cpp
+#include "A.h"
+void fun(){}
+```
+`C.cpp`:
+```cpp
+#include "A.h"
+
+int main(){
+    return 0;
+}
+```
+然后我们编译它:
+```bash
+$ clang++ B.cpp C.pp -c
+$ clang++ B.o C.o
+```
+然后理所当然我们收到k重定义的错误：
+```bash
+C.o : error LNK2005: "int k" (?k@@3HA) 已经在 B.o 中定义
+a.exe : fatal error LNK1169: 找到一个或多个多重定义的符号
+clang++.exe: error: linker command failed with exit code 1169 (use -v to see invocation)
+```
+
+现在`A.h`使用内联变量：
+```cpp
+#ifndef _A
+#define _A
+
+inline int k = 7;
+
+#endif
+```
+再进行编译，天空晴朗，了无异常。k的重定义不复存在。
