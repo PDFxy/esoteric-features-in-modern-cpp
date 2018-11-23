@@ -1,4 +1,5 @@
 # esoteric-features-in-modern-cpp
+快餐问题，用少数
 本文探讨现代C++(11,14,17,20后续会补上)中那些鲜为人知甚至未曾实现过的一些特性。资料来源于cppref的编译器支持一览表,添加原则是**鲜为人知**或者**少有人知但是用处极大的**，也欢迎贡献本文未曾提到的无人问津之地。让我们看看地表最复杂的语言已经进化到什么程度了:smile:。
 
 编译器使用`MSVC2017(19.15.x)`,`g++ 8.2`,`clang++7.0`。
@@ -12,7 +13,7 @@
 | 内联变量(inline variable) | [P0386R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r2.pdf) | [std17.md](std17.md) |
 | 保证式拷贝消除 | [P0135R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0135r1.html) | to write |
 | 折叠表达式 | [N4295](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4295.html) | to write |
-| 构造函数继承 | [P0136R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0136r1.html) | to write |
+| 继承构造函数 | [P0136R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0136r1.html) | [std17.md](std17.md) |
 | `nan()`,`nearbyint()`,`nextafter()`等数学函数| [P0226R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0226r1.pdf) | to write |
 | if/switch中的初始化语句 | [P0305R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r1.html) | to write |
 | `constexpr` lambda表达式 | [P0170R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0170r1.pdf) | to write |

@@ -124,3 +124,31 @@ inline int k = 7;
 #endif
 ```
 再进行编译，天空晴朗，了无异常。k的重定义不复存在。
+
+# 1.7  继承构造函数(inheriting constructors)
+其实C++11已有继承构造函数，C++17只是做了些reword的工作。考虑下面这个例子：
+```cpp
+#include <iostream>
+
+struct Base{
+  int k;double d;char c;
+  Base(int k, double d, char c):k(k),d(d),c(d){
+    std::cout<<"k="<<k<<",d="<<d<<",c="<<c<<"\n";
+  }
+};
+struct Derive : Base{
+  Derive(int k, double d, char c):Base(k,d,c){}
+};
+
+int main(){
+  Derive d(400820,3.14,'f');
+  return 0;
+}
+```
+Derive的那个**非常非常长**的构造函数只是把参数传递给Base的构造函数，别无其他。而这个工作已经在Base构造函数体现过，我们有理由也完全可以复用它。基于此考虑，就有了继承构造函数:
+```cpp
+struct Derive : Base{
+  //Derive(int k, double d, char c):Base(k,d,c){}
+  using Base::Base;
+};
+```
