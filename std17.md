@@ -175,5 +175,15 @@ if(Expr* k = evalBinaryExpr(lhs,rhs,op);typeof(k)==typeof(IntExpr)){
 # 2.0 `constexpr` lambda表达式
 
 # 2.1 `std::string_view`
+一句话概括，`std::string_view`用于代替`const std::string&`或`const std::string`。
+
+它不持有字符串，只是一个字符串的视图。也就是说这个对象可以用来观察字符串，但是不能基于这个对象改变字符串；它观察的字符串可以被改变，这个改变也能被观察到：
+```cpp
+    std::string s = "aaa";
+    std::string_view p = s; //观察s
+    std::cout << p;         //aaa
+    s = "bbb";              //改变它观察的字符串值
+    std::cout << p;         //bbb
+```
 
 # 2.2 结构化绑定
