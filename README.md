@@ -15,7 +15,7 @@
 | 折叠表达式 | [N4295](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4295.html) | to write |
 | 继承构造函数 | [P0136R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0136r1.html) | [std17.md](std17.md) |
 | `nan()`,`nearbyint()`,`nextafter()`等数学函数| [P0226R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0226r1.pdf) | to write |
-| if/switch中的初始化语句 | [P0305R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r1.html) | to write |
+| if/switch中的初始化语句 | [P0305R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r1.html) | [std17.md](std17.md) |
 | `constexpr` lambda表达式 | [P0170R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0170r1.pdf) | to write |
 | [`std::string_view`](https://en.cppreference.com/w/cpp/string/basic_string_view) | [N3921](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3921.html) | to write |
 | 结构化绑定 | [P0217R3](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r3.html) | to write |

@@ -125,6 +125,10 @@ inline int k = 7;
 ```
 再进行编译，天空晴朗，了无异常。k的重定义不复存在。
 
+# 1.5 保证式拷贝消除
+
+# 1.6 折叠表达式
+
 # 1.7  继承构造函数(inheriting constructors)
 其实C++11已有继承构造函数，C++17只是做了些reword的工作。考虑下面这个例子：
 ```cpp
@@ -152,3 +156,24 @@ struct Derive : Base{
   using Base::Base;
 };
 ```
+
+# 1.9 if/switch中的过初始化语句
+先定义变量再判断变量值是个常用的语句,在C++17z之前，我们需要这样写:
+```cpp
+Expr* k = evalBinaryExpr(lhs,rhs,op);
+if(typeof(k)==typeof(IntExpr)){
+  ...
+}
+```
+现代的语言如Golang运行在if中完成这两个逻辑关联的操作，C++17对此提供了直接的支持，我们也能像golang一样：
+```cpp
+if(Expr* k = evalBinaryExpr(lhs,rhs,op);typeof(k)==typeof(IntExpr)){
+  ...
+}
+```
+
+# 2.0 `constexpr` lambda表达式
+
+# 2.1 `std::string_view`
+
+# 2.2 结构化绑定
