@@ -187,3 +187,31 @@ if(Expr* k = evalBinaryExpr(lhs,rhs,op);typeof(k)==typeof(IntExpr)){
 ```
 
 # 2.2 结构化绑定
+
+# 2.3 constexpr if语句
+
+# 2.4 std::any
+`std::any`类似于其他标准库的variant，它可以容纳任何类型值，然后通过`std::any_cast<Type>()`来获取值：
+```cpp
+#include <any>
+#include <iostream>
+struct F {
+    int k = 1024;
+};
+
+int main() {
+    std::any obj = F();
+    std::cout << std::any_cast<F>(obj).k;
+    obj = 1;
+    obj = 3.14;
+    obj = true;
+    obj = 'c';
+    std::cout << obj.has_value();
+    obj.reset();
+    std::cout << obj.has_value();
+    return 0;
+}
+```
+注意如果转换失败，即类型不匹配就会抛出`std::bad_any_cast`异常：
+
+# 2.5 std::apply
